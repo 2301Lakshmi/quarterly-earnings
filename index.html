@@ -1,159 +1,21 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings — Interactive Reveal.js</title>
-
-  <!-- Reveal.js from CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/solarized.css" id="theme">
-
-  <!-- Highlight.js for code syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-
-  <!-- KaTeX for math (Reveal.js math plugin will use this) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-
-  <style>
-    /* small visual tweak */
-    .reveal .slides section { font-size: 20px; }
-    .email { font-size: 0.9em; opacity: 0.9; }
-  </style>
+  <title>RevealJS Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
 </head>
 <body>
-
-  <div class="reveal">
-    <div class="slides">
-
-      <!-- Title slide (HTML) -->
-      <section>
-        <h1>Q4 Quarterly Earnings — Interactive Report</h1>
-        <h3>Prepared by: Technical Consulting Team</h3>
-        <p class="email">Contact: <a href="mailto:22f1000912@ds.study.iitm.ac.in">22f1000912@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">Start with a quick overview and welcome stakeholders. Mention the interactive capabilities (code samples, math, speaker notes).</aside>
-      </section>
-
-      <!-- Markdown slide (using the Markdown plugin) -->
-      <section data-markdown>
-        <textarea data-template>
-
-## Highlights — Q4
-
-- **Revenue:** Up 6% QoQ
-- **Operating Margin:** 14.2% (improved due to cost discipline)
-- **Key drivers:** Product X adoption, reduced churn
-
-> *This slide is written in Markdown* — Reveal.js will render it.
-
----
-
-### Quick links
-
-- [Full financial workbook](#)
-- [Appendix & models](#)
-
-        </textarea>
-        <aside class="notes">Talk through the bullet points; expand briefly on each driver. Use the links for deeper dives during the Q&amp;A.</aside>
-      </section>
-
-      <!-- Slide with animated fragments -->
-      <section>
-        <h2>Revenue Breakdown</h2>
-        <p class="fragment">Total Revenue: <strong>$1.24B</strong></p>
-        <p class="fragment">Product Revenue: <strong>$820M</strong></p>
-        <p class="fragment">Services &amp; Other: <strong>$420M</strong></p>
-        <aside class="notes">Use fragments to reveal each line: first total, then product, then services. Pause between reveals to let stakeholders absorb numbers.</aside>
-      </section>
-
-      <!-- Slide with code sample (syntax highlighting) -->
-      <section>
-        <h2>Example: Calculating CAGR (Python)</h2>
-        <pre><code class="language-python">def cagr(begin_value, end_value, periods):
-    return (end_value / begin_value) ** (1 / periods) - 1
-
-# Example
-print(f"CAGR: {cagr(900_000_000, 1_240_000_000, 3):.2%}")</code></pre>
-        <aside class="notes">Explain the code briefly. This runs in a Python REPL; during the live demo you can copy the snippet into a notebook to show results.</aside>
-      </section>
-
-      <!-- Slide with mathematical equations -->
-      <section data-markdown>
-        <textarea data-template>
-
-### Financial Formulas
-
-**EBITDA Margin:**
-
-\[ \text{EBITDA Margin} = \frac{\text{EBITDA}}{\text{Revenue}} \times 100\% \]
-
-**Net Present Value (NPV):**
-
-\[ \text{NPV} = \sum_{t=0}^N \frac{C_t}{(1+r)^t} \]
-
-The formulas above will render using KaTeX/Math plugin.
-
-        </textarea>
-        <aside class="notes">Point out why NPV matters for project valuation; highlight the discount rate and cashflow assumptions.</aside>
-      </section>
-
-      <!-- Slide with fragments + code example reveal -->
-      <section>
-        <h2>Interactive: Show Code, Then Output</h2>
-        <p class="fragment">1) Paste the Python CAGR function (previous slide).</p>
-        <p class="fragment">2) Run with historical revenue to show growth %.</p>
-        <pre class="fragment"><code class="language-javascript">// Quick JS snippet for in-browser demo
-function cagr(begin, end, periods) {
-  return Math.pow(end / begin, 1 / periods) - 1;
-}
-console.log('CAGR:', (cagr(900000000,1240000000,3)*100).toFixed(2) + '%');</code></pre>
-        <aside class="notes">Use the fragments to step the audience through: first instructions, then code, then run. You can run the JS snippet in browser console live.</aside>
-      </section>
-
-      <!-- Closing slide -->
-      <section>
-        <h2>Appendix & Next Steps</h2>
-        <ol>
-          <li class="fragment">Deep-dive model review</li>
-          <li class="fragment">Action items for next quarter</li>
-          <li class="fragment">Q&amp;A</li>
-        </ol>
-        <p class="email">For follow-ups: <a href="mailto:22f1000912@ds.study.iitm.ac.in">22f1000912@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">Wrap-up, confirm action owners and timelines. Invite questions.</aside>
-      </section>
-
-    </div>
+<div class="reveal">
+  <div class="slides">
+    <section>Slide 1</section>
+    <section>Slide 2</section>
   </div>
-
-  <!-- Reveal.js and plugins -->
-  <script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/notes/notes.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/math/math.esm.js"></script>
-
-  <!-- highlight.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-
-  <!-- KaTeX (for math rendering) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-
-  <script>
-    // Initialize Reveal
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealNotes, RevealMath ],
-      math: {
-        // use KaTeX
-        katex: { macros: {} }
-      },
-      markdown: {
-        smartypants: true
-      }
-    });
-
-    // Ensure highlight.js highlights code on slide change
-    Reveal.on('ready', function() { document.querySelectorAll('pre code').forEach((el) => hljs.highlightElement(el)); });
-    Reveal.on('slidechanged', function() { document.querySelectorAll('pre code').forEach((el) => hljs.highlightElement(el)); });
-  </script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize();
+</script>
 </body>
 </html>
