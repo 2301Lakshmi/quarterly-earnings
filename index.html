@@ -2,20 +2,69 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>RevealJS Presentation</title>
+  <title>Quarterly Earnings - RevealJS</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/default.min.css">
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
-    <section>Slide 1</section>
-    <section>Slide 2</section>
+
+    <section>
+      <h2>Quarterly Earnings Report</h2>
+      <p>Technical Consultant</p>
+      <p><b>Email:</b> 22f1000912@ds.study.iitm.ac.in</p>
+      <aside class="notes">Introduce yourself and the report overview.</aside>
+    </section>
+
+    <section data-markdown>
+      <textarea data-template>
+## Markdown Slide  
+- Point A  
+- Point B  
+- Email: **22f1000912@ds.study.iitm.ac.in**
+      </textarea>
+    </section>
+
+    <section>
+      <h3>Animated Fragment Elements</h3>
+      <p class="fragment">Revenue increased 12%</p>
+      <p class="fragment">Expenses decreased 5%</p>
+      <p class="fragment">Net Profit ↑</p>
+    </section>
+
+    <section>
+      <h3>Code Sample</h3>
+      <pre><code class="hljs javascript">
+function profit(revenue, cost) {
+    return revenue - cost;
+}
+console.log(profit(1000, 450));
+      </code></pre>
+    </section>
+
+    <section>
+      <h3>Financial Formula</h3>
+      <p>\[ ROI = \frac{Net\ Profit}{Investment} \times 100 \]</p>
+      <aside class="notes">Explain how ROI relates to quarterly performance.</aside>
+    </section>
+
   </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.js"></script>
+
 <script>
-  Reveal.initialize();
+  Reveal.initialize({
+    hash: true,
+    plugins: [ RevealMarkdown, RevealMath.KaTeX ]
+  });
+  hljs.highlightAll();
 </script>
+
 </body>
 </html>
